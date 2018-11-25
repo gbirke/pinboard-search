@@ -1,15 +1,40 @@
 <template>
-    <div class="posts">
-        <div class="post" v-for="post in posts" :key="post.hash">
-            <a class="post--title" :href="post.href">{{ post.description }}</a>
-            <div class="post--description" v-if="post.extended">{{ post.extended }}</div>
-            <ul class="post--tags" v-if="post.tags">
-                <li v-for="tag in post.tags.split( ' ' )" :key="post.hash + tag">
-                    <a class="post--tag" href="#">{{ tag }}</a>
-                </li>
-            </ul>
-        </div>
+  <div class="posts">
+    <div
+      v-for="post in posts"
+      :key="post.hash"
+      class="post"
+    >
+      <a
+        class="post--title"
+        :href="post.href"
+      >
+        {{ post.description }}
+      </a>
+      <div
+        v-if="post.extended"
+        class="post--description"
+      >
+        {{ post.extended }}
+      </div>
+      <ul
+        v-if="post.tags"
+        class="post--tags"
+      >
+        <li
+          v-for="tag in post.tags.split( ' ' )"
+          :key="post.hash + tag"
+        >
+          <a
+            class="post--tag"
+            href="#"
+          >
+            {{ tag }}
+          </a>
+        </li>
+      </ul>
     </div>
+  </div>
 </template>
 
 <script>

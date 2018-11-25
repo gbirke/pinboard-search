@@ -1,15 +1,18 @@
 <template>
-  <div id="app" class="container">
-      <nav class="top-bar">
-          Pinboard Search
-      </nav>
-      <!-- TODO search fields -->
-      <div class="main">
-          <SearchResult :posts="posts" />
-      </div>
-      <aside class="tags">
-          Tags go here, TODO
-      </aside>
+  <div
+    id="app"
+    class="container"
+  >
+    <nav class="top-bar">
+      Pinboard Search
+    </nav>
+    <!-- TODO search fields -->
+    <div class="main">
+      <SearchResult :posts="posts" />
+    </div>
+    <aside class="tags">
+      Tags go here, TODO
+    </aside>
   </div>
 </template>
 
@@ -18,7 +21,7 @@ import SearchResult from './components/SearchResult';
 import posts from './dummy_data/posts';
 
 export default {
-  name: 'app',
+  name: 'App',
   components: {
 	SearchResult
   },
