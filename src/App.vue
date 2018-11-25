@@ -1,8 +1,15 @@
 <template>
-  <div id="app">
+  <div id="app" class="container">
+      <nav class="top-bar">
+          Pinboard Search
+      </nav>
+      <!-- TODO search fields -->
       <div class="main">
           <SearchResult :posts="posts" />
       </div>
+      <aside class="tags">
+          Tags go here, TODO
+      </aside>
   </div>
 </template>
 

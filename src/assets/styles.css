@@ -6,7 +6,24 @@ a {
 	text-decoration: none;
 }
 
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+.top-bar {
+	width: 100%;
+	margin-bottom: 3em;
+}
+
 .main {
 	max-width: 700px;
-	margin: 0 auto;
+	flex: 1;
+}
+
+.tags {
+	width: 350px;
+	padding: 0 0.5em;
 }
