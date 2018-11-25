@@ -4,7 +4,8 @@
   - [ ] Search bar
   - [ ] Tag cloud
   - [ ] Tag search bar
-  - [ ] Search Results
+  - [X] Search Results
+  - [ ] Top bar (Title)
 - [ ] Search result server
   - [ ] Term search
   - [ ] Tag search

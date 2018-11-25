@@ -1,0 +1,12 @@
+body {
+	font-size: 90%;
+}
+
+a {
+	text-decoration: none;
+}
+
+.main {
+	max-width: 700px;
+	margin: 0 auto;
+}
