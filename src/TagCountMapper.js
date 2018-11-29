@@ -1,4 +1,5 @@
 import * as R from 'ramda'
+import Partitioner from './Partitioner';
 
 export default class TagCountMapper {
 	constructor( ranges ) {
@@ -6,6 +7,10 @@ export default class TagCountMapper {
 	}
 
 	mapTags( tags ) {
-		return R.map( () => this.ranges[0], tags )
+		const counts = R.values( tags );
+		const minCount = R.apply( Math.min, counts );
+		const maxCount = R.apply( Math.max, counts );
+		const partitioner = new Partitioner( minCount, maxCount, counts.length );
+		return R.map( count => { return this.ranges[ Math.min(this.ranges.length-1, partitioner.partition(count) ) ] }, tags );
 	}
 }
