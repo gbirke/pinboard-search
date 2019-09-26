@@ -30,6 +30,7 @@ it( 'should create big partitions if number of sections is smaller than range', 
 	expect( partitioner.partition( 100 ) ).toBe( 5 );
 } );
 
+// This is for tag lists where there is not much variance in the tag counts - they should still be displayed.
 it( 'should return first partition when number of sections is greater than range items', () => {
 	const partitioner = new Partitioner( 1, 10, 100 );
 	expect( partitioner.partition( 1 ) ).toBe( 0 );
@@ -44,6 +45,7 @@ it( 'should return first partition when number of sections is greater than range
 	expect( partitioner.partition( 10 ) ).toBe( 0 );
 } );
 
+// This is for tag lists where there is a bit more variance in the tag counts, but still not much
 it( 'should return some partition when number of sections is greater than range items', () => {
 	const partitioner = new Partitioner( 1, 10, 20 );
 	expect( partitioner.partition( 1 ) ).toBe( 0 );
